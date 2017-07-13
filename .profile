@@ -37,13 +37,10 @@ export LESS_TERMCAP_us=$(printf '\e[04;38;5;200m') # enter underline mode
 ##  setting the environment variable for JAVA, MAVEN, TOMCAT
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 export JRE_HOME=$JAVA_HOME/jre
-export JBOSS_HOME=/Users/akasshukla/jboss-as-7.1.3.Final
-export CATALINA_HOME=/Users/akasshukla/Downloads/ride-5.1.4-mac64/apache-tomcat-7.0.47
-export PATH=$JAVA_HOME/bin:$JRE_HOME/bin:$JBOSS_HOME/bin:$PATH
+export PATH=$JAVA_HOME/bin:$JRE_HOME/bin:$PATH
 
-## setting the postgres status cmd
-alias pstatus="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log status"
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
-## some utility cmd
-alias helix="cp ~/.m2/helixsetting/settings.xml ~/.m2/settings.xml"
-alias raptor="cp ~/.m2/raptorsetting/settings.xml ~/.m2/settings.xml"
+
+alias show="defaults write com.apple.finder AppleShowAllFiles YES; killall Finder"
+alias hide="defaults write com.apple.finder AppleShowAllFiles NO; killall Finder"
